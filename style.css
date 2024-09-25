@@ -1,0 +1,802 @@
+/* Variables for Colors */
+:root {
+    --beaver: rgb(246, 244, 242); /* Color for the nav text */
+    --walnut-brown: hsla(34, 18%, 38%, 1); /* Background color for the entire page */
+}
+
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: var(--walnut-brown); /* Set the background of the whole page */
+    transition: opacity 1s ease;
+}
+
+/* Hero Section */
+.hero {
+    padding-top: 80px; /* Adjusted to provide space for the fixed navbar */
+}
+
+/* Navigation Bar */
+.nav {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(143, 125, 100, 0.2);
+    backdrop-filter: blur(20px);
+    padding: 10px 40px;
+    border-radius: 30px;
+    z-index: 1000;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Hide hamburger by default */
+.hamburger {
+    display: none;
+}
+
+/* Navigation Links */
+.nav .link ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav .link ul li {
+    list-style: none;
+    margin: 0 15px;
+}
+
+.nav .link ul li a {
+    color: var(--beaver);
+    font-size: 18px;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    transition: background-color 0.3s ease;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .nav .link ul {
+        display: none; /* Hide links by default */
+        flex-direction: column; /* Stack vertically */
+        position: absolute;
+        top: 60px; /* Adjust position based on your design */
+        left: 50%;
+        transform: translateX(-50%);
+        background: rgba(143, 125, 100, 0.2);
+        border-radius: 10px;
+        width: 80%; /* Adjust as needed */
+    }
+
+    .nav .link ul.active {
+        display: flex; /* Show links when active */
+    }
+
+    .hamburger {
+        display: block; /* Show hamburger icon on small screens */
+        cursor: pointer; /* Change cursor */
+    }
+}
+
+/* Main Content */
+.main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: calc(100vh - 80px); /* Full height minus navbar */
+    background: var(--walnut-brown); /* Set the background of the main content */
+    padding: 20px;
+    background-color:#3D2921ff;
+}
+
+.men {
+    width: 400px;
+    border-radius: 60%;
+    margin-right: 40px;
+}
+
+.main-detail {
+    max-width: 600px;
+}
+
+.main-detail h1 {
+    font-size: 36px;
+    margin: 10px 0;
+    color: white; /* Text color for better readability */
+}
+
+.main-detail p1 {
+    font-size: 24px;
+    display: block;
+    color: white; /* Text color for better readability */
+}
+
+.main-detail p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: white; /* Text color for better readability */
+}
+
+.btn button {
+    background-color: hsla(34, 18%, 38%, 1);
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn button:hover {
+    background-color: #555;
+}
+
+/* Social Media Icons */
+.social {
+    margin-top: 20px;
+}
+
+.social i {
+    font-size: 24px;
+    color: hsla(34, 18%, 38%, 1);
+    margin: 0 10px;
+    cursor: pointer;
+}
+
+.social i:hover {
+    color: #555;
+}
+
+/* Responsive Design for Smaller Screens */
+@media (max-width: 768px) {
+    .nav .link ul li {
+        margin: 0 10px;
+    }
+
+    .main {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .main-detail h1 {
+        font-size: 28px;
+    }
+
+    .main-detail p1 {
+        font-size: 20px;
+    }
+}
+
+
+/* Skills section */
+.skills-section {
+    background-color: hsla(293, 24%, 7%, 1);
+    width: 100vw; /* Full screen width */
+    height: 100vh; /* Full screen height */
+    box-sizing: border-box;
+    padding: 20px;
+    display: flex;
+    flex-direction: column; 
+    position: relative;
+}
+
+h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    text-align: center; 
+    margin-top: 40px;
+    color: hsla(33, 31%, 65%, 1);
+}
+
+p {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+/* Center the skills container */
+.skills-container-wrapper {
+    flex-grow: 1; 
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+}
+
+.skills-container {
+    width: 100%;
+    max-width: 1200px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap; /* Ensures content wraps on smaller screens */
+    gap: 20px; /* Adds gap between columns on small screens */
+}
+
+.skills-column {
+    width: 48%; /* Two columns on larger screens */
+}
+
+.skill-category {
+    background: hsla(35, 18%, 48%, 1);
+    border: 1px solid hsla(35, 18%, 48%, 1);
+    border-radius: 8px;
+    padding: 15px;
+    margin-bottom: 15px;
+    transition: height 0.5s ease;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.category-header {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: hsla(17, 30%, 18%, 1);
+}
+
+.arrow {
+    transition: transform 0.3s ease;
+}
+
+.skills-details {
+    margin-top: 15px;
+    display: none;
+}
+
+.skill {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    color: hsla(17, 30%, 18%, 1);
+}
+
+.progress-bar {
+    flex-grow: 1;
+    height: 6px;
+    background-color: #ddd;
+    border-radius: 10px;
+    margin: 0 15px;
+    overflow: hidden;
+}
+
+.progress {
+    height: 100%;
+    background-color: hsla(4, 26%, 13%, 1);
+    border-radius: 10px;
+}
+
+.percentage {
+    font-size: 0.9rem;
+    color: hsla(17, 30%, 18%, 1);
+}
+
+.skill:last-child {
+    margin-bottom: 0;
+}
+
+.skill-category.active .skills-details {
+    display: block;
+}
+
+.skill-category.active .arrow {
+    transform: rotate(180deg);
+}
+
+/* Responsive Design */
+
+/* Medium screens (tablets, smaller laptops) */
+@media (max-width: 1024px) {
+    h2 {
+        font-size: 1.8rem;
+    }
+
+    .skills-column {
+        width: 100%; /* Full width columns on medium screens */
+    }
+}
+
+/* Small screens (mobile phones) */
+@media (max-width: 768px) {
+    h2 {
+        font-size: 1.5rem;
+        margin-top: 20px;
+    }
+
+    p {
+        font-size: 1rem;
+        margin-bottom: 20px;
+    }
+
+    .skills-container {
+        flex-direction: column; /* Stacks columns vertically */
+        align-items: center;
+    }
+
+    .skills-column {
+        width: 100%;
+    }
+
+    .category-header {
+        font-size: 1.2rem;
+    }
+
+    .skill-category {
+        padding: 10px;
+    }
+
+    .progress-bar {
+        height: 5px;
+    }
+}
+
+/* Extra small screens (small mobile devices) */
+@media (max-width: 480px) {
+    h2 {
+        font-size: 1.3rem;
+    }
+
+    .skills-column {
+        width: 100%;
+    }
+
+    .category-header {
+        font-size: 1rem;
+    }
+
+    .skill-category {
+        padding: 8px;
+    }
+
+    .progress-bar {
+        height: 4px;
+    }
+
+    .percentage {
+        font-size: 0.8rem;
+    }
+}
+
+
+
+
+#projects {
+    background-color: #292225; /* Dark background */
+    padding: 50px 20px;
+    color: #000; /* Light text color */
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; /* Allows multiple cards to wrap on smaller screens */
+}
+.pro {
+    background-color: #292225;
+    font-size: 1.5rem; /* Adjusted font size */
+    margin-bottom: 25px; /* Reduced margin for better spacing */
+    color: #000; /* Light text color */
+    font-family: 'Georgia', serif; /* Changed font */
+    text-align: center; /* Center the text */
+    align-content: center; /* Center content */
+}
+
+/* Individual project card */
+.project {
+    background-color: hsla(29, 30%, 55%, 1); /* Slightly lighter background */
+    border-radius: 10px;
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Initial subtle shadow */
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Hover effect */
+    width: 90%; /* Width adjusted */
+    max-width: 700px; /* Larger max width for rectangle shape */
+    height: 600px; /* Increased height for more content space */
+    text-align: center; /* Centers text */
+    position: relative; /* For aligning buttons */
+}
+
+.project:hover {
+    transform: scale(1.05); /* Slight scaling effect */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); /* Increased shadow with blur on all sides */
+    border-radius: 15px; /* Slight rounding of corners for a soft look */
+}
+
+.project h2 {
+    font-size: 1.8rem; /* Larger heading size */
+    margin-bottom: 25px; /* Reduced margin for better spacing */
+    color: #000; /* Light text color */
+    font-family: 'Arial', sans-serif;
+    
+}
+
+.project-image {
+    flex-grow: 1; /* Allow the image to take the remaining space */
+    object-fit: contain; /* Adjust as needed (use cover to fill space, may crop) */
+}
+
+/* Project details */
+.project-details {
+    padding: 15px; /* Padding around the section */
+    flex-grow: 1; /* Ensures this section takes up available space */
+    text-align: left; /* Align text to the left */
+    display: flex; /* Use flexbox for layout */
+    flex-direction: column; /* Stack items vertically */
+    justify-content: flex-start; /* Align items at the top */
+    align-items: flex-start; /* Align items to the left */
+    margin: 0; /* Reset margins */
+}
+
+/* Heading */
+.project-details h2 {
+    font-size: 1.8rem; /* Heading size */
+    margin: 0 0 10px; /* Bottom margin for spacing */
+    color: #000; /* Heading color */
+}
+
+/* Description */
+.project-details p {
+    font-size: 1rem; /* Adjust font size for description */
+    margin: 0 0 20px; /* Bottom margin for spacing */
+    line-height: 1.5; /* Improves text readability */
+}
+
+
+
+
+/* Project links (Read More and Git Repo) */
+.project-links {
+    display: flex;
+    justify-content: flex-start; /* Align buttons to the bottom-left */
+    padding: 0 20px 20px 20px;
+    position: absolute; /* Positioned relative to project container */
+    bottom: 0; /* Stick to the bottom */
+    left: 0; /* Align left */
+    gap: 10px;
+}
+
+/* Button style */
+.project-links a {
+    background-color: hsla(17, 30%, 18%, 1);
+    color: hsla(46, 14%, 56%, 1);
+    padding: 5px 10px; /* Further reduced padding */
+    border-radius: 4px; /* Slightly smaller border radius */
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    font-size: 0.8rem; /* Reduced font size */
+}
+
+
+.project-links a:hover {
+    background-color: #e67e22; /* Darker hover effect */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .project {
+        width: 95%; /* Slightly more responsive */
+        height: auto; /* Adjust height for mobile */
+    }
+
+    .project-image {
+        height: 250px; /* Increase image height on smaller screens */
+    }
+
+    .project-links {
+        padding-bottom: 15px; /* Reduce padding for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    #projects {
+        padding: 30px 10px;
+    }
+
+    .project-details p {
+        font-size: 1rem;
+    }
+}
+
+
+/* Professional Experience Section */
+#experience {
+    background-color: hsla(29, 30%, 55%, 1); /* Darker background */
+    padding: 50px 20px;
+    color: #ecf0f1; /* Light text color */
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Experience heading */
+.experience-heading {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    color: hsla(293, 24%, 7%, 1); /* Highlighted heading color */
+    text-align: center;
+}
+
+/* Experience card */
+.experience {
+    background-color: hsla(17, 30%, 18%, 1); /* Slightly lighter than the section background */
+    border-radius: 10px;
+    margin: 20px 0;
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adds depth */
+    transition: transform 0.3s ease; /* Hover effect */
+    width: 80%; /* Responsive width */
+    max-width: 1000px; /* Limit max width */
+    overflow: hidden;
+}
+
+.experience:hover {
+    transform: scale(1.05); /* Hover scaling effect */
+}
+
+/* Experience details */
+.experience h2 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+    color: #f39c12; /* Project role highlighted */
+}
+
+.experience p {
+    font-size: 1rem;
+    margin-bottom: 15px;
+    color: #bdc3c7; /* Lighter text for company details */
+}
+
+.experience ul {
+    list-style-type: square;
+    margin-left: 20px;
+    color: #ecf0f1;
+}
+
+.experience li {
+    margin-bottom: 10px;
+    font-size: 1rem;
+}
+
+/* Certificate image */
+.certificate-image {
+    width: 25%;
+    margin-left: 20px;
+    border-radius: 10px;
+    object-fit: cover;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3); /* Subtle shadow for image */
+    transition: transform 0.3s ease; /* Hover effect for image */
+}
+
+.certificate-image:hover {
+    transform: scale(1.1); /* Slightly enlarge image on hover */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .experience {
+        flex-direction: column; /* Stack the content vertically on smaller screens */
+    }
+
+    .certificate-image {
+        width: 100%;
+        margin-top: 20px; /* Add spacing above the image */
+    }
+
+    .experience h2 {
+        font-size: 1.6rem;
+    }
+
+    .experience p {
+        font-size: 0.95rem;
+    }
+
+    .experience ul {
+        margin-left: 15px;
+    }
+
+    .experience li {
+        font-size: 0.95rem;
+    }
+}
+
+@media (max-width: 480px) {
+    #experience {
+        padding: 30px 10px;
+    }
+
+    .experience-heading {
+        font-size: 2rem;
+    }
+
+    .experience h2 {
+        font-size: 1.4rem;
+    }
+
+    .experience p {
+        font-size: 0.85rem;
+    }
+
+    .experience li {
+        font-size: 0.85rem;
+    }
+}
+
+/* Research Work Section */
+#research {
+    background-color: #555; /* Lighter shade for research section */
+    text-align: center;
+    padding: 60px 20px; /* Padding for better spacing */
+    color: hsla(17, 30%, 18%, 1); /* Darker text for contrast */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center all content horizontally */
+    gap: 40px; /* Space between elements */
+}
+
+.research-heading {
+    font-size: 2.8rem; /* Slightly larger font size for prominence */
+    margin-bottom: 20px; /* Less space below the heading */
+    color: #000; /* Warm, golden color for visual interest */
+    font-weight: 600; /* Bolder font for emphasis */
+}
+
+.research-details h2 {
+    font-size: 2rem; /* Larger size for research titles */
+    color: #000; /* A warm, inviting color */
+    margin-bottom: 15px; /* Added space below the title */
+    font-weight: 500; /* Medium weight for balanced typography */
+}
+
+.research-details p {
+    font-size: 1.2rem; /* Slightly larger text for readability */
+    margin-bottom: 15px; /* Consistent spacing */
+    color: #ecf0f1; /* Softer text color for readability */
+}
+
+/* Updated Research Image Section for Vertical Layout */
+.research-images {
+    display: flex;
+    flex-direction: column; /* Vertical stacking for images */
+    align-items: center; /* Centered alignment */
+    gap: 20px; /* Gap between images */
+    margin: 30px 0; /* Space between section content */
+}
+
+.research-image {
+    width: 60%; /* Adjusted width for vertical layout */
+    border-radius: 15px; /* Softer rounded corners for a modern look */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Softer, deeper shadow */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effect */
+}
+
+.research-image:hover {
+    transform: scale(1.05); /* Slightly larger on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Enhanced shadow on hover */
+}
+
+.research-certificate {
+    margin-top: 50px; /* Space above the certificate section */
+}
+
+.research-certificate h2 {
+    font-size: 1.8rem; /* Keep certificate heading size consistent */
+    color: #000;
+    margin-bottom: 20px; /* Added space below the heading */
+}
+
+.research-certificate img {
+    width: 50%; /* Adjusted width for vertical layout */
+    border-radius: 12px; /* Softer rounded corners */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Deep shadow for pop */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
+}
+
+.research-certificate img:hover {
+    transform: scale(1.05); /* Enlarge image on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Enhance shadow on hover */
+}
+
+/* Contact Section */
+#contact {
+    padding: 80px 20px;
+    background-color: hsla(46, 14%, 66%, 1); /* Retained your background color */
+    text-align: center;
+}
+
+#contact h2 {
+    font-size: 3rem;
+    color: hsla(293, 24%, 7%, 1); /* Retained your heading color */
+    margin-bottom: 20px;
+    font-family: 'Montserrat', sans-serif; /* Elegant font for headings */
+}
+
+#contact p {
+    font-size: 1.3rem;
+    color: hsla(334, 9%, 15%, 1); /* Retained paragraph color */
+    margin-bottom: 40px;
+    font-family: 'Open Sans', sans-serif; /* Clean and readable font for body text */
+}
+
+/* Form Styling */
+form {
+    background-color: hsla(17, 30%, 18%, 1); /* Retained background color for the form */
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Enhanced shadow for depth */
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+#contactForm input[type="text"], #contactForm input[type="email"], #contactForm textarea {
+    width: 100%;
+    padding: 12px;
+    margin: 15px 0;
+    border: 1px solid #000; /* Retained border color */
+    border-radius: 8px;
+    background-color: hsla(46, 14%, 56%, 1); /* Kept your input background color */
+    font-size: 1.1rem;
+    color: #000; /* Retained text color */
+    font-family: 'Open Sans', sans-serif;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease; /* Smooth focus effect */
+}
+
+#contactForm input[type="text"]:focus, #contactForm input[type="email"]:focus, #contactForm textarea:focus {
+    border-color: hsla(29, 30%, 55%, 1); /* Accent color on focus */
+    box-shadow: 0 0 8px hsla(29, 30%, 55%, 0.5); /* Soft glow on focus */
+}
+
+/* Buttons Styling */
+input[type="submit"], input[type="reset"] {
+    padding: 12px 30px;
+    border: none;
+    border-radius: 6px;
+    background-color: #f39c12; /* Retained button color */
+    color: #1e2a38; /* Retained button text color */
+    font-size: 1.2rem;
+    font-family: 'Montserrat', sans-serif;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s;
+}
+
+input[type="submit"]:hover, input[type="reset"]:hover {
+    background-color: hsla(29, 30%, 55%, 1); /* Kept hover color */
+    transform: scale(1.05); /* Added subtle hover effect */
+}
+
+/* Flexbox for Action Buttons */
+.actions {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.actions li {
+    list-style: none;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    form {
+        padding: 30px;
+    }
+
+    input[type="submit"], input[type="reset"] {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+}
