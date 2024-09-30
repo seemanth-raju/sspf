@@ -87,7 +87,6 @@ body {
     }
 }
 
-/* Main Content */
 .main {
     display: flex;
     justify-content: center;
@@ -95,17 +94,20 @@ body {
     min-height: calc(100vh - 80px); /* Full height minus navbar */
     background: var(--walnut-brown); /* Set the background of the main content */
     padding: 20px;
-    background-color:#3D2921ff;
+    background-color: #3D2921ff;
 }
 
 .men {
     width: 400px;
-    border-radius: 60%;
+    height: 400px;
+    border-radius: 50%;
     margin-right: 40px;
+    object-fit: cover;
 }
 
 .main-detail {
     max-width: 600px;
+    text-align: left; /* Ensure text is left-aligned */
 }
 
 .main-detail h1 {
@@ -114,16 +116,29 @@ body {
     color: white; /* Text color for better readability */
 }
 
+.main-detail h4 {
+    font-size: 18px;
+    color: #f0f0f0;
+    margin: 5px 0;
+}
+
 .main-detail p1 {
     font-size: 24px;
     display: block;
-    color: white; /* Text color for better readability */
+    color: white;
+    margin-bottom: 5px; /* Add space between p1 and h1 */
 }
 
 .main-detail p {
     font-size: 16px;
     line-height: 1.6;
-    color: white; /* Text color for better readability */
+    color: white;
+    margin-bottom: 20px; /* Add space before the button */
+    text-align: left; /* Ensure the paragraph is left-aligned */
+}
+
+.btn {
+    margin-top: 20px;
 }
 
 .btn button {
@@ -173,6 +188,15 @@ body {
 
     .main-detail p1 {
         font-size: 20px;
+    }
+
+    .main-detail p, .main-detail p1, .main-detail h4 {
+        text-align: center; /* Center-align text on smaller screens */
+    }
+
+    .men {
+        margin-right: 0;
+        margin-bottom: 20px;
     }
 }
 
@@ -370,7 +394,7 @@ p {
 
 /* General Styling */
 #projects {
-    background-color: #312E56ff; /* Darker background for contrast */
+    background-color: #000; /* Darker background for contrast */
     padding: 50px 20px;
     color: #ecf0f1; /* Light text color */
     font-family: 'Arial', sans-serif;
@@ -395,7 +419,7 @@ p {
     grid-gap: 40px; /* Space between the boxes */
     width: 100%; /* Ensure the container spans the full width */
     max-width: 1200px; /* Limit max width for better centering */
-    background-color: #312E56ff;
+    background-color: #000;
     padding: 0 20px;
 }
 
@@ -432,10 +456,23 @@ p {
     color: #292225;
 }
 
+/* Technologies Used (Bold) */
+.project-technologies {
+    font-size: 1rem;
+    color: #ecf0f1;
+    margin: 0; /* Remove margin */
+    padding: 0; /* Remove padding */
+    font-weight: bold; /* Make the text bold */
+    line-height: 1.5; /* Set line height for better readability */
+}
+
+/* Summary with minimal spacing */
 .project-summary {
     font-size: 1rem;
-    color: #555;
-    margin-bottom: 20px;
+    color: #ecf0f1;
+    margin: 0; /* Remove margin */
+    padding: 0; /* Remove padding */
+    line-height: 1.5; /* Set line height for better readability */
 }
 
 /* Link styling */

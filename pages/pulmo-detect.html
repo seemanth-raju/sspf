@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Detail</title>
+    <link rel="stylesheet" href="../project-details.css">
+</head>
+<body onload="document.body.style.opacity='1'">
+
+    <!-- Navigation Bar -->
+    <div class="hero">
+        <div class="nav">
+            <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
+            <div class="link">
+                <ul>
+                    <li><a href="../index.html" class="nav-link">Home</a></li>
+                    <li><a href="../index.html#projects" class="nav-link">Projects</a></li>
+                    <li><a href="../index.html#contact" class="nav-link">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Project Section -->
+    <section class="project-detail">
+        <div class="project-header">
+            <h1 class="project-title">Pulmo-Detect Cancer Detection</h1>
+            <img src="../img/cancer.jpeg" alt="Project Image" class="project-image">
+        </div>
+        <div class="project-description">
+            <h2>About this Project</h2>
+            <p>This project is designed to help users with [detailed description of the project]. It features modern technologies like [mention tools] and aims to solve [problem statement].</p>
+            <p>The development process involved [description of methods or technologies used], making it a valuable solution for [target audience].</p>
+            <p>You can check out the complete code and documentation on GitHub by clicking the button below.</p>
+        </div>
+        <a href="https://github.com/yourproject" class="github-btn">View on GitHub</a>
+    </section>
+
+    <script>
+        function toggleMenu() {
+            const ul = document.querySelector('.nav .link ul');
+            ul.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>
