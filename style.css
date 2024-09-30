@@ -368,144 +368,115 @@ p {
 
 
 
+/* General Styling */
 #projects {
-    background-color: #292225; /* Dark background */
+    background-color: #312E56ff; /* Darker background for contrast */
     padding: 50px 20px;
-    color: #000; /* Light text color */
+    color: #ecf0f1; /* Light text color */
     font-family: 'Arial', sans-serif;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap; /* Allows multiple cards to wrap on smaller screens */
-}
-.pro {
-    background-color: #292225;
-    font-size: 1.5rem; /* Adjusted font size */
-    margin-bottom: 25px; /* Reduced margin for better spacing */
-    color: #000; /* Light text color */
-    font-family: 'Georgia', serif; /* Changed font */
-    text-align: center; /* Center the text */
-    align-content: center; /* Center content */
-}
-
-/* Individual project card */
-.project {
-    background-color: hsla(29, 30%, 55%, 1); /* Slightly lighter background */
-    border-radius: 10px;
-    margin: 20px;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Initial subtle shadow */
+    align-items: center;
+    width: 100%;
+}
+
+/* Projects Heading */
+.projects-heading {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    color: hsla(40, 90%, 70%, 1); /* A bright color for contrast */
+    text-align: center;
+}
+
+/* Projects Container using CSS Grid */
+.projects-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 columns for larger screens */
+    grid-gap: 40px; /* Space between the boxes */
+    width: 100%; /* Ensure the container spans the full width */
+    max-width: 1200px; /* Limit max width for better centering */
+    background-color: #312E56ff;
+    padding: 0 20px;
+}
+
+/* Individual Project Box */
+.project-cube {
+    background-color: #AF8B69ff;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
     overflow: hidden;
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Hover effect */
-    width: 90%; /* Width adjusted */
-    max-width: 700px; /* Larger max width for rectangle shape */
-    height: 600px; /* Increased height for more content space */
-    text-align: center; /* Centers text */
-    position: relative; /* For aligning buttons */
-}
-
-.project:hover {
-    transform: scale(1.05); /* Slight scaling effect */
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); /* Increased shadow with blur on all sides */
-    border-radius: 15px; /* Slight rounding of corners for a soft look */
-}
-
-.project h2 {
-    font-size: 1.8rem; /* Larger heading size */
-    margin-bottom: 25px; /* Reduced margin for better spacing */
-    color: #000; /* Light text color */
-    font-family: 'Arial', sans-serif;
-    
-}
-
-.project-image {
-    flex-grow: 1; /* Allow the image to take the remaining space */
-    object-fit: contain; /* Adjust as needed (use cover to fill space, may crop) */
-}
-
-/* Project details */
-.project-details {
-    padding: 15px; /* Padding around the section */
-    flex-grow: 1; /* Ensures this section takes up available space */
-    text-align: left; /* Align text to the left */
-    display: flex; /* Use flexbox for layout */
-    flex-direction: column; /* Stack items vertically */
-    justify-content: flex-start; /* Align items at the top */
-    align-items: flex-start; /* Align items to the left */
-    margin: 0; /* Reset margins */
-}
-
-/* Heading */
-.project-details h2 {
-    font-size: 1.8rem; /* Heading size */
-    margin: 0 0 10px; /* Bottom margin for spacing */
-    color: #000; /* Heading color */
-}
-
-/* Description */
-.project-details p {
-    font-size: 1rem; /* Adjust font size for description */
-    margin: 0 0 20px; /* Bottom margin for spacing */
-    line-height: 1.5; /* Improves text readability */
-}
-
-
-
-
-/* Project links (Read More and Git Repo) */
-.project-links {
+    text-align: center;
+    padding: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    height: 100%;
     display: flex;
-    justify-content: flex-start; /* Align buttons to the bottom-left */
-    padding: 0 20px 20px 20px;
-    position: absolute; /* Positioned relative to project container */
-    bottom: 0; /* Stick to the bottom */
-    left: 0; /* Align left */
-    gap: 10px;
+    flex-direction: column;
+    justify-content: space-between; /* Ensure content inside the box is well spaced */
 }
 
-/* Button style */
-.project-links a {
-    background-color: hsla(17, 30%, 18%, 1);
-    color: hsla(46, 14%, 56%, 1);
-    padding: 5px 10px; /* Further reduced padding */
-    border-radius: 4px; /* Slightly smaller border radius */
+.project-cube:hover {
+    transform: translateY(-10px); /* Adds a hover effect to lift the box */
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15); /* Enhance the shadow on hover */
+}
+
+.project-image img {
+    max-width: 100%;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.project-title {
+    font-size: 1.75rem;
+    margin-bottom: 10px;
+    color: #292225;
+}
+
+.project-summary {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+/* Link styling */
+.project-link {
     text-decoration: none;
-    font-weight: bold;
-    transition: background-color 0.3s ease;
-    font-size: 0.8rem; /* Reduced font size */
+    color: inherit;
+    display: block;
+    height: 100%;
 }
 
-
-.project-links a:hover {
-    background-color: #e67e22; /* Darker hover effect */
+/* Responsive Styling */
+@media (max-width: 1024px) {
+    .projects-container {
+        grid-template-columns: repeat(3, 1fr); /* 3 columns for medium screens */
+    }
 }
 
-/* Responsive Design */
 @media (max-width: 768px) {
-    .project {
-        width: 95%; /* Slightly more responsive */
-        height: auto; /* Adjust height for mobile */
+    .projects-container {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns for small screens */
+        grid-gap: 20px; /* Reduce gap between boxes */
+        padding: 0 10px; /* Padding to prevent boxes from touching container edges */
     }
 
-    .project-image {
-        height: 250px; /* Increase image height on smaller screens */
+    .projects-heading {
+        font-size: 2rem;
     }
 
-    .project-links {
-        padding-bottom: 15px; /* Reduce padding for smaller screens */
+    .project-cube {
+        padding: 15px;
     }
 }
 
 @media (max-width: 480px) {
-    #projects {
-        padding: 30px 10px;
-    }
-
-    .project-details p {
-        font-size: 1rem;
+    .projects-container {
+        grid-template-columns: 1fr; /* Stack all boxes vertically on very small screens */
+        grid-gap: 20px;
+        padding: 0 10px; /* Padding to prevent boxes from touching container edges */
     }
 }
+
 
 
 /* Professional Experience Section */
