@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Website</title>
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Boxicons CSS for icons -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    
+    <style>
+        /* Enable smooth scrolling for the entire page */
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+
+<body onload="document.body.style.opacity='1'">
+    <div class="hero">
+        <!-- Navigation bar -->
+        <div class="nav">
+            <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
+            <div class="link">
+                <ul>
+                    <li><a href="#about" class="nav-link">About</a></li>
+                    <li><a href="#skills" class="nav-link">Skills</a></li>
+                    <li><a href="#projects" class="nav-link">Projects</a></li>
+                    <li><a href="#experience" class="nav-link">Experience</a></li>
+                    <li><a href="#research" class="nav-link">Research</a></li>
+                    <li><a href="#contact" class="nav-link">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+   
+        <!-- About Section -->
+        <div class="main" id="about">
+            <img src="img/about.jpeg" alt="Shruti Brahma" class="men">
+            <div class="main-detail">
+                <p1>Hello I'm</p1>
+                <h1>Shruti Brahma</h1>
+                <h4>DataScience Engineer</h4>
+                <p>Computer Science and Engineering student at JNTU, with a keen interest in programming, algorithms, and artificial intelligence. Passionate about leveraging technology for positive change, I have engaged in various projects and internships aimed at the intersection of AI, cybersecurity, and data science. With a strong foundation in programming, algorithms, and data science, I aspire to continue exploring opportunities that allow me to contribute meaningfully to technological advancements and data-driven solutions.</p>
+                <br>
+                <div class="btn">
+                    <button type="submit">Download CV</button>
+                </div>
+
+                <div class="social">
+                    <i class='bx bxl-github'></i>
+                    <i class='bx bxl-instagram'></i>
+                </div>
+            </div>
+        </div>
+
+       <!-- Skills Section -->
+    
+    
+       <div class="skills-section" id="skills">
+        <h2>Skills</h2>
+        
+        <div class="skills-container-wrapper">
+        <div class="skills-container">
+            <!-- Left Column -->
+            <div class="skills-column">
+                <div class="skill-category" onclick="toggleSkills(this)">
+                    <div class="category-header">
+                        <span>AI & Data Science</span>
+                        <span class="arrow">&#9650;</span>
+                    </div>
+                    <div class="skills-details">
+                        <div class="skill">
+                            <span>Computer Vision</span>
+                            <div class="progress-bar">
+                                <div class="progress" style="width: 92%;"></div>
+                            </div>
+                            
+                        </div>
+                        <div class="skill">
+                            <span>Natural Language Processing</span>
+                            <div class="progress-bar">
+                                <div class="progress" style="width: 85%;"></div>
+                            </div>
+                            
+                        </div>
+                        <div class="skill">
+                            <span>Signal Processing</span>
+                            <div class="progress-bar">
+                                <div class="progress" style="width: 90%;"></div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="skill-category" onclick="toggleSkills(this)">
+                    <div class="category-header">
+                        <span>Probability & Statistics</span>
+                        <span class="arrow">&#9650;</span>
+                    </div>
+                    <div class="skills-details">
+                        <div class="skill">
+                            <span>Data Analytics & Visualization</span>
+                            <div class="progress-bar">
+                                <div class="progress" style="width: 80%;"></div>
+                            </div>
+                            
+                        </div>
+                        <div class="skill">
+                            <span>Frameworks & Libraries</span>
+                            <div class="progress-bar">
+                                <div class="progress" style="width: 90%;"></div>
+                            </div>
+                           
+                        </div>
+                    </div>
+                </div>
+    
+            </div>
+    
+            <!-- Right Column -->
+            <div class="skills-column">
+                <div class="skill-category" onclick="toggleSkills(this)">
+                    <div class="category-header">
+                        <span>Software Development</span>
+                        <span class="arrow">&#9650;</span>
+                    </div>
+                    <div class="skills-details">
+                        <div class="skill">
+                            <span>Frontend Development</span>
+                            <div class="progress-bar">
+                                <div class="progress" style="width: 85%;"></div>
+                            </div>
+                            
+                        </div>
+                        <div class="skill">
+                            <span>Backend Development</span>
+                            <div class="progress-bar">
+                                <div class="progress" style="width: 90%;"></div>
+                            </div>
+                            
+                        </div>
+                        <div class="skill">
+                            <span>Databases</span>
+                            <div class="progress-bar">
+                                <div class="progress" style="width: 80%;"></div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="skill-category" onclick="toggleSkills(this)">
+                    <div class="category-header">
+                        <span>Miscellaneous Skills</span>
+                        <span class="arrow">&#9650;</span>
+                    </div>
+                    <div class="skills-details">
+                        <div class="skill">
+                            <span>Project Management</span>
+                            <div class="progress-bar">
+                                <div class="progress" style="width: 85%;"></div>
+                            </div>
+                            
+                        </div>
+                        <div class="skill">
+                            <span>Communication</span>
+                            <div class="progress-bar">
+                                <div class="progress" style="width: 90%;"></div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+    
+            
+    
+
+    
+
+<div id="projects" class="projects-section">
+    <h1 class="projects-heading">Projects</h1>
+    <div class="projects-container">
+        <a href="pages/virtual-assistant.html" class="project-link">
+            <div class="project-cube">
+                <div class="project-image">
+                    <img src="img/images.jpeg" alt="Virtual Assistant">
+                </div>
+                <div class="project-title">Virtual Voice Assistant</div>
+                
+                <!-- Technologies Used Section -->
+                <div class="project-technologies">
+                    <p><strong>Technologies Used:</strong> Python, NLP (spaCy, transformers), Google Speech-to-Text API</p>
+                </div>
+                
+                <div class="project-summary">A virtual assistant built using advanced NLP techniques.</div>
+            </div>
+        </a>
+        
+        <a href="pages/pulmo-detect.html" class="project-link">
+            <div class="project-cube">
+                <div class="project-image"><img src="img/cancer.jpeg" alt="Pulmo Detect"></div>
+                <div class="project-title">Pulmo-Detect Cancer Detection</div>
+                <div class="project-technologies">
+                    <p><strong>Technologies Used:</strong> Python, TensorFlow, Keras, Convolutional Neural Network (CNN), medical image preprocessing.</p>
+                </div>
+                <div class="project-summary">A CNN model for lung cancer detection built during a hackathon.</div>
+            </div>
+        </a>
+        <a href="pages/fall.html" class="project-link">
+            <div class="project-cube">
+                <div class="project-image"><img src="img/fall.png" alt="Pulmo Detect"></div>
+                <div class="project-title">Fall Detection and SOS System</div>
+                <div class="project-technologies">
+                    <p><strong>Technologies Used:</strong>Java, Android Studio, accelerometer/gyroscope sensors, Firebase, GPS integration.</p>
+                </div>
+                <div class="project-summary">Created an Android app to detect falls using mobile sensors and send SOS alerts with location.</div>
+            </div>
+        </a>
+        <a href="pages/object.html" class="project-link">
+            <div class="project-cube">
+                <div class="project-image"><img src="img/object.webp" alt="Pulmo Detect"></div>
+                <div class="project-title">Real-Time Object Detection App</div>
+                <div class="project-technologies">
+                    <p><strong>Technologies Used:</strong>Python, TensorFlow, OpenCV, MobileNet architecture, Speech Recognition API, YOLO</p>
+                </div>
+                <div class="project-summary">Trained a TensorFlow object detection model, integrated into a mobile app with voice commands.</div>
+            </div>
+        </a>
+        <a href="pages/Drowsiness.html" class="project-link">
+            <div class="project-cube">
+                <div class="project-image"><img src="img/download.png" alt="Pulmo Detect"></div>
+                <div class="project-title">Driver Drowsiness Detection System</div>
+                <div class="project-technologies">
+                    <p><strong>Technologies Used:</strong>Python, OpenCV, Dlib, Haar Cascade, SciPy, NumPy.</p>
+                </div>
+                <div class="project-summary">Developed a driver drowsiness detection system using computer vision and machine learning.</div>
+            </div>
+        </a>
+        <a href="pages/scene.html" class="project-link">
+            <div class="project-cube">
+                <div class="project-image"><img src="img/encoder_decoder.png" alt="Pulmo Detect"></div>
+                <div class="project-title">Scene Recognition for Smart Eyewear</div>
+                <div class="project-technologies">
+                    <p><strong>Technologies Used:</strong>TensorFlow, Keras, Inception V3, Transformer-based models, OpenCV.</p>
+                </div>
+                <div class="project-summary">Built scene recognition models for smart eyewear using advanced deep learning techniques.</div>
+            </div>
+        </a>
+        <a href="pages/ocr.html" class="project-link">
+            <div class="project-cube">
+                <div class="project-image"><img src="img/speech.jpeg" alt="Pulmo Detect"></div>
+                <div class="project-title">Handwritten Text-to-Speech Converter</div>
+                <div class="project-technologies">
+                    <p><strong>Technologies Used:</strong>Python, Tesseract OCR, pyttsx3 (Text-to-Speech).</p>
+                </div>
+                <div class="project-summary">Developed a system to convert handwritten text to speech using OCR and TTS systems.</div>
+            </div>
+        </a>
+        <a href="pages/drone.html" class="project-link">
+            <div class="project-cube">
+                <div class="project-image"><img src="img/drone.jpeg" alt="Pulmo Detect"></div>
+                <div class="project-title">Agricultural Drone Monitoring System</div>
+                <div class="project-technologies">
+                    <p><strong>Technologies Used:</strong>Python, RTSP, image segmentation, computer vision, GPS.I</p>
+                </div>
+                <div class="project-summary">Developed agricultural drones for monitoring and information retrieval using real-time vision</div>
+            </div>
+        </a>
+        <!-- Add more projects similarly -->
+        
+    </div>
+</div>
+
+
+
+<div class="main" id="experience">
+    <h1 class="experience-heading">Professional Experience</h1>
+
+    <div class="experience">
+        <div class="experience-details">
+            <h2>AI Engineer</h2>
+            <p>Purview - Smart Eyewear Company | Location | January 2022 - Present</p>
+            <ul>
+                <li>Engineered AI-driven solutions for smart eyewear devices, focusing on real-time object detection, scene recognition, and user-interactive systems through voice commands.</li>
+                <li>Developed a robust fall detection algorithm with integrated SOS alarm activation, optimizing for ultra-low latency response on resource-constrained devices.</li>
+                <li>Implemented handwritten text recognition and real-time text-to-speech conversion, transforming Vuzix Smart Eyewear into an assistive tool for the visually impaired, ensuring accurate and quick data processing in noisy environments.</li>
+                <li>Deployed RTSP-based drone technology for seamless video streaming and remote monitoring, facilitating precise data retrieval in agricultural applications.</li>
+                <li>Optimized machine learning models to work efficiently under the stringent computational limits of wearable hardware, ensuring minimal resource consumption while maintaining high performance.</li>
+            </ul>
+        </div>
+        <img src="img/speech.jpeg" alt="AI Engineer Certificate" class="certificate-image">
+    </div>
+</div>
+
+
+<div class="main" id="research">
+    <h1 class="research-heading">Research Work</h1>
+
+    <div class="research-details">
+        <h2>Impact of Activation Functions on Malware Detection</h2>
+        <p>Presented at AICTA’23, an international AI conference</p>
+        <p>Awarded: Best Paper Presented</p>
+        <p>Published in SCOPUS-indexed Springer Series</p>
+        <p>Date: February 2023 - December 2023</p>
+        <p>Authors: Shruti Brahma</p>
+        <h3>Abstract:</h3>
+        <p>
+            In this study, we explore the impact of activation functions on the performance of Multi-Layer Perceptron (MLP) models for malware detection. 
+            Activation functions play a crucial role in the learning dynamics of neural networks by introducing non-linearity, which allows for better feature representation. 
+            We compare several activation functions, including identity, logistic, hyperbolic tangent, rectified linear unit (ReLU), and leaky rectified linear unit (Leaky ReLU), 
+            applied across the hidden layers of an MLP. The primary objective is to evaluate how the choice and combination of these functions affect the classification 
+            accuracy for distinguishing between benign and malicious applications.
+        </p>
+        <p>
+            Our results show that using Leaky ReLU as a uniform activation function across all hidden layers provides the highest accuracy (98.22%). 
+            Furthermore, varying activation functions across different layers — specifically, a combination of Leaky ReLU, ReLU, and hyperbolic tangent — 
+            results in an accuracy of 97.91%, demonstrating the influence of function selection on optimizing model performance for malware detection.
+        </p>
+    </div>
+
+    <div class="research-images">
+        <img src="img/speech.jpeg" alt="Research Image 1" class="research-image">
+    </div>
+
+    <div class="research-certificate">
+        <h2>Certificate of Recognition</h2>
+        <img src="img/speech.jpeg" alt="Research Certificate" class="certificate-image">
+    </div>
+</div>
+
+<article id="contact" class="wrapper style4">
+    <div class="container medium">
+        <header>
+            <h2>Contact Me</h2>
+            <p>Feel free to get in touch with me for any inquiries or collaboration opportunities.</p>
+        </header>
+        <div class="row">
+            <div class="col-12">
+                <form id="contactForm" method="post" onsubmit="event.preventDefault(); validateAndSendEmail();">
+                    <div class="row">
+                        <div class="col-6 col-12-small">
+                            <input type="text" name="name" id="name" placeholder="Your Name" />
+                        </div>
+                        <div class="col-6 col-12-small">
+                            <input type="email" name="email" id="email" placeholder="Your Email" />
+                        </div>
+                        <div class="col-12">
+                            <input type="text" name="subject" id="subject" placeholder="Subject" />
+                        </div>
+                        <div class="col-12">
+                            <textarea name="message" id="message" placeholder="Your Message"></textarea>
+                        </div>
+                        <div class="col-12">
+                            <ul class="actions">
+                                <li><input type="submit" value="Send Message" /></li>
+                                <li><input type="reset" value="Clear Form" class="alt" /></li>
+                            </ul>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</article>
+
+
+    <!-- Include the necessary scripts for form handling -->
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="script.js"></script>
+</body>
+
+
+
+</html>
