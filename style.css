@@ -456,24 +456,22 @@ p {
     color: #292225;
 }
 
-/* Technologies Used (Bold) */
+/* Remove unnecessary spacing between Technologies Used and Summary */
 .project-technologies {
     font-size: 1rem;
     color: #ecf0f1;
-    margin: 0; /* Remove margin */
-    padding: 0; /* Remove padding */
-    font-weight: bold; /* Make the text bold */
-    line-height: 1.5; /* Set line height for better readability */
+    margin: 0; /* Remove all margins */
+    padding: 0; /* Remove any padding */
 }
 
-/* Summary with minimal spacing */
+/* Ensure the summary has minimal spacing */
 .project-summary {
     font-size: 1rem;
     color: #ecf0f1;
-    margin: 0; /* Remove margin */
-    padding: 0; /* Remove padding */
-    line-height: 1.5; /* Set line height for better readability */
+    margin: 0; /* Remove any margin */
+    padding: 0; /* Remove any padding */
 }
+
 
 /* Link styling */
 .project-link {
@@ -482,6 +480,7 @@ p {
     display: block;
     height: 100%;
 }
+
 
 /* Responsive Styling */
 @media (max-width: 1024px) {
@@ -643,80 +642,58 @@ p {
     }
 }
 
-/* Research Work Section */
+/* Research Section */
 #research {
-    background-color: #555; /* Lighter shade for research section */
+    background-color: #555;
     text-align: center;
-    padding: 60px 20px; /* Padding for better spacing */
-    color: hsla(17, 30%, 18%, 1); /* Darker text for contrast */
+    padding: 60px 20px;
+    color: hsla(17, 30%, 18%, 1);
     display: flex;
     flex-direction: column;
-    align-items: center; /* Center all content horizontally */
-    gap: 40px; /* Space between elements */
+    align-items: center;
+    gap: 40px;
 }
 
 .research-heading {
-    font-size: 2.8rem; /* Slightly larger font size for prominence */
-    margin-bottom: 20px; /* Less space below the heading */
-    color: #000; /* Warm, golden color for visual interest */
-    font-weight: 600; /* Bolder font for emphasis */
+    font-size: 2.8rem;
+    margin-bottom: 20px;
+    color: #000;
+    font-weight: 600;
 }
 
 .research-details h2 {
-    font-size: 2rem; /* Larger size for research titles */
-    color: #000; /* A warm, inviting color */
-    margin-bottom: 15px; /* Added space below the title */
-    font-weight: 500; /* Medium weight for balanced typography */
+    font-size: 2rem;
+    color: #000;
+    margin-bottom: 15px;
+    font-weight: 500;
 }
 
 .research-details p {
-    font-size: 1.2rem; /* Slightly larger text for readability */
-    margin-bottom: 15px; /* Consistent spacing */
-    color: #ecf0f1; /* Softer text color for readability */
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+    color: #ecf0f1;
 }
 
-/* Updated Research Image Section for Vertical Layout */
-.research-images {
-    display: flex;
-    flex-direction: column; /* Vertical stacking for images */
-    align-items: center; /* Centered alignment */
-    gap: 20px; /* Gap between images */
-    margin: 30px 0; /* Space between section content */
+/* PDF Download Link */
+.research-pdf {
+    margin-top: 30px;
 }
 
-.research-image {
-    width: 60%; /* Adjusted width for vertical layout */
-    border-radius: 15px; /* Softer rounded corners for a modern look */
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Softer, deeper shadow */
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effect */
+.pdf-link {
+    font-size: 1.5rem;
+    color: #1abc9c; /* Bright color for visibility */
+    text-decoration: none;
+    border: 2px solid #1abc9c;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
 }
 
-.research-image:hover {
-    transform: scale(1.05); /* Slightly larger on hover */
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Enhanced shadow on hover */
+.pdf-link:hover {
+    background-color: #1abc9c; /* Change background on hover */
+    color: #fff; /* Change text color on hover */
 }
 
-.research-certificate {
-    margin-top: 50px; /* Space above the certificate section */
-}
-
-.research-certificate h2 {
-    font-size: 1.8rem; /* Keep certificate heading size consistent */
-    color: #000;
-    margin-bottom: 20px; /* Added space below the heading */
-}
-
-.research-certificate img {
-    width: 50%; /* Adjusted width for vertical layout */
-    border-radius: 12px; /* Softer rounded corners */
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Deep shadow for pop */
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
-}
-
-.research-certificate img:hover {
-    transform: scale(1.05); /* Enlarge image on hover */
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Enhance shadow on hover */
-}
 
 /* Contact Section */
 #contact {
